@@ -13,13 +13,21 @@
   So the '|' operator is not "or", but "MatchFirst":
   
   test0 = '0:5'
+  
   indexRange = Word(nums) + ':' + Word(nums)
+  
   test1 = '<5>'
+  
   test2 = '<0:5>'
+  
   bitslice = Combine('<'+ (indexRange | Word(nums)) + '>')
+  
   r1 = bitslice.parseString(test1)
+  
   r2 = bitslice.parseString(test2)
+  
   r0 = indexRange.parseString(test0)
+  
   
   if you define
   bitslice = Combine('<'+ (Word(nums) | indexRange) + '>')
