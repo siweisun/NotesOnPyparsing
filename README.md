@@ -32,3 +32,6 @@
   if you define
   bitslice = Combine('<'+ (Word(nums) | indexRange) + '>')
   Then there will be a bug.
+  
+  ## Bugs due to Chinese punctuations
+  Today I try to parse a file containing the DSL I designed. There is always a unknown bug. It finally tures out I input a chinese ';'.
